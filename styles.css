@@ -1,0 +1,42 @@
+.timed-mutes-modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0 16px;
+}
+
+.timed-mutes-modal-field label {
+  font-size: 14px;
+  color: var(--text-color-muted);
+}
+
+.timed-mutes-modal-custom {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.timed-mutes-modal-custom input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.timed-mutes-modal-custom .select-wrapper {
+  flex: 0 0 45%;
+}
+
+.timed-mutes-modal-summary {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: var(--text-color-muted);
+}
+
+.timed-mutes-empty {
+  color: var(--text-color-muted);
+}
+
+.timed-mutes-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
