@@ -1,7 +1,7 @@
 {
   "id": "impro-plugin-timed-mutes",
   "name": "Timed Mutes",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Impro",
   "description": "Mute accounts for a set amount of time. Mutes are lifted automatically when the timer runs out, and you can manage them from the plugin settings.",
   "permissions": {
