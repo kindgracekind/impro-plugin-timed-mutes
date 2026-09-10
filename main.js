@@ -1887,7 +1887,7 @@ var TimedMutesSettingTab = class extends PluginSettingTab {
     }
     for (const [did, entry] of entries) {
       new Setting(this.containerEl).setName(describeProfile(entry)).setDesc(
-        `Until ${formatDate(entry.until)} \xB7 ${formatTimeLeft(entry.until, now)}`
+        `Muted ${formatDate(entry.mutedAt)} \xB7 Until ${formatDate(entry.until)} \xB7 ${formatTimeLeft(entry.until, now)}`
       ).addButton(
         (button) => button.setButtonText("Extend").onClick(() => {
           plugin.openMuteModal(

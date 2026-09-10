@@ -258,7 +258,7 @@ class TimedMutesSettingTab extends PluginSettingTab {
       new Setting(this.containerEl)
         .setName(describeProfile(entry))
         .setDesc(
-          `Until ${formatDate(entry.until)} · ${formatTimeLeft(entry.until, now)}`,
+          `Muted ${formatDate(entry.mutedAt)} · Until ${formatDate(entry.until)} · ${formatTimeLeft(entry.until, now)}`,
         )
         .addButton((button) =>
           button.setButtonText("Extend").onClick(() => {
