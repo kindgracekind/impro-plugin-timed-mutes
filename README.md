@@ -7,3 +7,5 @@ Mute an account for a set amount of time instead of forever.
 - Manage active timed mutes — extend them or unmute early — from the plugin's settings page.
 
 Timed mutes are stored in your account's private plugin settings, so they sync across your devices.
+
+**Note:** If you disable or uninstall the plugin while a timed mute is still active, that account will stay muted until you unmute it manually.

@@ -238,7 +238,7 @@ class TimedMutesSettingTab extends PluginSettingTab {
 
     this.containerEl.createEl("h2", {
       text: "Active timed mutes",
-      cls: "setting-item-name",
+      cls: "timed-mutes-section-title",
     });
 
     const now = Date.now();

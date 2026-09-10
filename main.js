@@ -23,7 +23,7 @@ __export(main_exports, {
 });
 module.exports = __toCommonJS(main_exports);
 
-// ../impro/impro-plugin/main.js
+// node_modules/@impro.social/impro-plugin/main.js
 var SimpleUUID = class {
   #id = 0;
   create() {
@@ -1872,7 +1872,7 @@ var TimedMutesSettingTab = class extends PluginSettingTab {
     );
     this.containerEl.createEl("h2", {
       text: "Active timed mutes",
-      cls: "setting-item-name"
+      cls: "timed-mutes-section-title"
     });
     const now = Date.now();
     const entries = Object.entries(plugin.data.mutes).sort(
