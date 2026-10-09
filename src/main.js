@@ -305,7 +305,9 @@ export default class TimedMutesPlugin extends Plugin {
       this.addMenuItem(menu, author);
     });
 
-    await this.liftExpiredMutes();
+    // Not awaited: the host fails plugins that take more than 2s to load, and
+    // each expired mute costs a profile lookup plus an unmute request.
+    this.liftExpiredMutes();
     this.timer = setInterval(() => {
       this.liftExpiredMutes();
     }, CHECK_INTERVAL_MS);
@@ -390,6 +392,8 @@ export default class TimedMutesPlugin extends Plugin {
         await this.persist();
         this.settingTab.refresh({ reset: true });
       }
+    } catch (error) {
+      console.warn("Failed to save lifted timed mutes", error);
     } finally {
       this.checking = false;
     }
