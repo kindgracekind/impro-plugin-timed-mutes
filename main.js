@@ -1928,7 +1928,7 @@ var TimedMutesPlugin = class extends Plugin {
       if (!author?.did) return;
       this.addMenuItem(menu, author);
     });
-    await this.liftExpiredMutes();
+    this.liftExpiredMutes();
     this.timer = setInterval(() => {
       this.liftExpiredMutes();
     }, CHECK_INTERVAL_MS);
@@ -2004,6 +2004,8 @@ var TimedMutesPlugin = class extends Plugin {
         await this.persist();
         this.settingTab.refresh({ reset: true });
       }
+    } catch (error) {
+      console.warn("Failed to save lifted timed mutes", error);
     } finally {
       this.checking = false;
     }
